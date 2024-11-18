@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Martel+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+
+* {
+
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+
+
+
+header {
+  background: #8E0E00;
+  background: linear-gradient(to right,
+      #8E0E00, #1F1C18);
+
+
+}
+
+
+
+body {
+  background: #8E0E00;
+  background: linear-gradient(to right,
+      #8E0E00, #1F1C18);
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+
+
+
+.card {
+
+  width: calc(100% / 3 - 10px);
+  /* Ogni carta occupa un terzo dello spazio disponibile */
+  margin: 5px;
+  background-color: #1F1C18;
+  border-radius: 4px;
+  transition: 0.2s linear;
+  margin: 3px;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.4);
+  z-index: 10;
+}
+
+.card-icon {
+  color: #fff;
+  padding: 0px !important;
+  font-size: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card-body {
+  display: none;
+  padding: 10px 15px;
+  position: absolute;
+  background-color: #1F1C18;
+  top: 120px;
+  width: 100%;
+}
+
+.card:hover .card-body {
+  display: block;
+}
+
+
+.watchAgain {
+  margin-top: 180px;
+
+}
+
+.footer {
+  margin-top: 300px;
+  height: 250px;
+}
+
+.footer ul {
+  list-style: none;
+  font-size: 15px;
+  color: #cfcfcf;
+  font-weight: 100;
+}
+
+.copyright {
+  font-size: 15px;
+  font-weight: 200;
+  color: #cfcfcf;
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* schermi più piccoli */
+
+@media (max-width: 768px) {
+  .slider-box {
+      display: flex;
+      justify-content: center; /* Centra la card nella vista */
+      padding: 10px; /* Aggiungi margini interni per un aspetto migliore */
+  }
+
+  .slider-box .card {
+      width: 100%; /* La card occupa tutta la larghezza dello schermo */
+      max-width: 350px; /* Puoi impostare un limite massimo opzionale */
+      margin: 0 auto; /* Centra la card */
+  }
+
+  .slider-box .card img {
+      width: 100%; /* L'immagine si ridimensiona con la card */
+      height: auto; /* Mantiene le proporzioni dell'immagine */
+      object-fit: cover; /* Garantisce che l'immagine riempia correttamente la card */
+  }
+
+  .card-body {
+      display: none !important; /* Nascondi il contenuto interattivo opzionale */
+  }
+
+  .card:hover{
+      transform: none; /* Evita effetti hover che possono disturbare il layout su touch */
+  }
+}
+
